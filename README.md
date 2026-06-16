@@ -19,6 +19,7 @@ Deduplicate within each type bucket independently
 Raise TypeError with a message if an unsupported type (e.g. dict, None) is encountered
 
 ==========================================================================================
+
 Test 1 — Integers only
 Input: [1, [2, [3, 2]], 1, [4]]
 Output dict:
@@ -26,6 +27,7 @@ Output dict:
 "integers": [1, 2, 3, 4]
 
 ==============================================================================================
+
 Test 2 — Mixed int, float, str
 Input: [3, ["apple", 1.5], ["apple", [2, 1.5, "banana"]]]
 Output dict:
@@ -35,6 +37,7 @@ Output dict:
 "strings": ["apple", "banana"]
 
 ==============================================================================================
+
 Test 3 — Bool vs int separation
 Input: [True, 1, False, [True, 0, [2, False]]]
 Output dict:
